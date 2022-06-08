@@ -6,3 +6,5 @@ Simple ASP.NET service imports a wrapped unmanaged C++ DLL. A Django application
 
 ## Example 1. Calculator in use (web browser)
 ![Alt Text](doc/gifs/calculationExample1.gif)
+## Example 2. Error when calculation service goes offline
+![Alt Text](doc/gifs/CalculatorErrorExample2.gif)
