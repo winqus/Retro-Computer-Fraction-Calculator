@@ -7,5 +7,5 @@ For learning purposes a more difficult approach was taken. Basic explanation of 
 
 ## Example 1. Calculator in use (web browser)
 ![Alt Text](doc/gifs/calculationExample1.gif)
-## Example 2. Error when calculation service goes offline
+## Example 2. Calculation service is unreachable
 ![Alt Text](doc/gifs/CalculatorErrorExample2.gif)
