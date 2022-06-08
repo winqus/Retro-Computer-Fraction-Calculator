@@ -1,4 +1,4 @@
-# Retro Computer Fraction Calculator
+# Retro Computer Style Fraction Calculator
  Retro Computer Style Fraction Calculator With Multiservices
  
 The task of this project was to use a compiled third-party unmanaged C++ DLL and create a front-end app for it in a different programming language. 
