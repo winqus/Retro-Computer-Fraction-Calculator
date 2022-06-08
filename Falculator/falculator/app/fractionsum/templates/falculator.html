@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/animations.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="icon" sizes="any" type="image/svg+xml" href="{% static 'favicon.svg' %}"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Falculator - Sum</title>
+    <script type="text/javascript" src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/falculatorJS.js' %}"></script>
+</head>
+<body>
+    <input type="text" id="hidden-input">
+    <div id="monitor" class="">
+        <div id="screen" class="w1613">
+            <div id="crt"> 
+                <div class="scanline"></div>
+                <div class="terminal glow hideScrollBar">
+                    <div id="line" class="cursor enter border">
+                        <pre id="inputarea" class="input-field screen-font"></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

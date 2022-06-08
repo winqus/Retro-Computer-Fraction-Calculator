@@ -1,0 +1,54 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0/win-x86",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {},
+    ".NETCoreApp,Version=v6.0/win-x86": {
+      "FCalculatorAPI/1.0.0": {
+        "dependencies": {
+          "BridgeForCalculateFractionsDll": "0.0.0.0",
+          "CSCalculateFractionsWrapperDll": "1.0.0.0"
+        },
+        "runtime": {
+          "FCalculatorAPI.dll": {}
+        }
+      },
+      "BridgeForCalculateFractionsDll/0.0.0.0": {
+        "runtime": {
+          "BridgeForCalculateFractionsDll.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "CSCalculateFractionsWrapperDll/1.0.0.0": {
+        "runtime": {
+          "CSCalculateFractionsWrapperDll.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "FCalculatorAPI/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BridgeForCalculateFractionsDll/0.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CSCalculateFractionsWrapperDll/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css?family=VT323&display=swap");
+/* @import url("https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap"); */
+/* @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"); */
+
+:root {
+    /* --main-element-color: #ffdc1b; */
+    --main-element-color: #ff981b;
+    --scale-multiplier: 0.62;
+    --screen-font-size: 38px;
+}
+@media screen and (min-width: 2000px) {
+    :root {
+        --scale-multiplier: 1;
+        --screen-font-size: 48px;
+    }
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+    margin: 0;
+    display: grid;
+    place-items: center;
+}
+pre {
+    /* font-family: "VT323"; */
+    
+    margin: 0;
+    display: inline;
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+    font-display: swap;
+}
+.glow {
+    color: inherit;
+    animation: glow 3s ease-in-out infinite alternate;
+}
+.blink {
+    animation: blink-animation 1s steps(5, start) infinite;
+    -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+
+.frac {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    text-align: center;
+    color: var(--main-element-color);
+    font-size: var(--screen-font-size);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.frac > span {
+    display: block;
+    padding: 0;
+}
+.frac span.bottom {
+    border-top: calc(5px * var(--scale-multiplier)) solid var(--main-element-color);
+    padding: 0;
+}
+.frac span.symbol {
+    display: none;
+} 
+
+#monitor {
+    font-family: "VT323";
+    /* font-family: "VT323", monospace; */
+}
+#screen {
+    background-color: rgb(0, 0, 0);
+    position: relative;
+    overflow: hidden;
+    word-break: break-all;
+    text-transform: uppercase;
+    
+}
+#screen {
+    width: calc(1613px * var(--scale-multiplier));
+    height: calc(1164px * var(--scale-multiplier));
+    border: calc(180px * var(--scale-multiplier))  solid transparent;
+    border-image-outset: 0;
+    border-image-source: url("../images/w1000 frame1 GRiDCase.png");
+    border-image-slice: calc(185*var(--scale-multiplier)) calc(127*var(--scale-multiplier)) calc(125*var(--scale-multiplier)) calc(118*var(--scale-multiplier));
+    border-image-outset: 0; 
+    border-image-width: auto;
+    filter:brightness(120%);
+
+    line-height: calc(3rem*var(--scale-multiplier));
+    font-weight: 700;
+    font-size: var(--screen-font-size);
+    letter-spacing: calc(0.1em*var(--scale-multiplier));
+}
+@media screen and (min-width: 2000px) {
+    #screen {
+        width: 1613px;
+        height: 1164px;
+        border:180px solid transparent;
+        border-image-outset: 0;
+        border-image-source: url("../images/w1613 frame1 GRiDCase.png");
+        border-image-slice: 185 127 125 118;
+        border-image-outset: 0; 
+        border-image-width: auto;
+        filter:brightness(120%);
+    
+        line-height: 3rem;
+        font-weight: 700;
+        font-size: var(--screen-font-size);
+        letter-spacing: 0.1em;
+    }
+}
+.terminal {
+    border-color: var(--main-element-color);
+    border: 10px solid;
+    color: var(--main-element-color);
+    margin: 1rem;
+    margin-top: 2rem;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+	padding: 2rem;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+.marker::after {
+    content: ">";
+}
+.marker-input::after {
+    content: "■";
+}
+#line {
+    margin-bottom: 10px;
+}
+#line.answer {
+    text-align: start;
+}
+#line.enter {
+    border-top: 1px solid var(--main-element-color);
+    padding-top: 10px;
+}
+#line > pre {
+    font-family: "VT323";
+}
+#line.enter::before {
+    content: ">";
+    animation: blink-animation 1s steps(5, start) infinite;
+    -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+#line.enter .input-field::after{
+    content: "_";
+    animation: blink-animation 1s steps(5, start) infinite;
+    -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+#line.created::before {
+    content: ">";
+}
+#line.wait::before {
+    content: "⁘";
+}
+#line.wait .input-field::after{
+    content: "";
+}
+.border {
+    border-color: var(--main-element-color);
+    border: 0px solid;
+    border-left: 0px solid;
+    color: var(--main-element-color);
+    padding-left: 10px;
+}
+.border.answer {
+    border-left: 0px solid;
+}
+#hidden-input {
+    position: absolute;
+    bottom: 0;
+    background-color: transparent;
+    border: none;
+}
+#crt:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(18, 16, 16, 0.25) 50%,
+        rgba(0, 0, 0, 0.25) 50%
+    );
+    background-size: 100% 8px;
+    z-index: 2;
+    pointer-events: none;
+}
+.invisible {
+    background-color: transparent;
+    color: transparent;
+}
+.scanline {
+    width: 100%;
+    height: 100px;
+    z-index: 8;
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(255, 238, 0, 0.582) 10%,
+        rgba(0, 0, 0, 0.1) 100%
+    );
+    opacity: 0.1;
+    position: absolute;
+    bottom: 100%;
+    animation: scanline 10s linear infinite;
+}
+.terminal::-webkit-scrollbar {
+    display: none;
+}
+.hideScrollBar::-webkit-scrollbar {
+    display: none;
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;
+}
+.hideScrollBar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;
+}
+*:focus {
+    outline: none;
+}

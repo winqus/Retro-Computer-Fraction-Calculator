@@ -1,0 +1,53 @@
+@keyframes scanline {
+    0% {
+        bottom: 100%;
+    }
+    80% {
+        bottom: 100%;
+    }
+    100% {
+        bottom: 0%;
+    }
+}
+@-webkit-keyframes scanline {
+    0% {
+        bottom: 100%;
+    }
+    80% {
+        bottom: 100%;
+    }
+    100% {
+        bottom: 0%;
+    }
+}
+@keyframes glow {
+    from {
+        text-shadow: 0 0 2px var(--main-element-color), 0 0 4px var(--main-element-color), 0 0 8px var(--main-element-color);
+        box-shadow: 0 0 10px 1px var(--main-element-color);
+    }
+    to {
+      text-shadow: 0 0 4px var(--main-element-color), 0 0 8px var(--main-element-color), 0 0 12px var(--main-element-color);
+      box-shadow: 0 0 20px 2px var(--main-element-color);
+    }
+}
+@-webkit-keyframes glow {
+    from {
+        text-shadow: 0 0 2px var(--main-element-color), 0 0 4px var(--main-element-color), 0 0 8px var(--main-element-color);
+        box-shadow: 0 0 10px 1px var(--main-element-color);
+    }
+    
+    to {
+      text-shadow: 0 0 4px var(--main-element-color), 0 0 8px var(--main-element-color), 0 0 12px var(--main-element-color);
+      box-shadow: 0 0 20px 2px var(--main-element-color);
+    }
+}
+@keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
+  }
+  @-webkit-keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
+  }
